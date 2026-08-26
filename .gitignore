@@ -1,0 +1,11 @@
+# Build output
+dist/
+
+# macOS
+.DS_Store
+
+# NOTE: media currently ships in this repo so GitHub Pages can serve it.
+# When the bunny.net CDN is wired up, uncomment these and rewrite the asset
+# paths to the CDN host — see README, "Deployment".
+# assets/*.mp4
+# assets/*.jpg
