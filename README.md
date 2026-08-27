@@ -164,20 +164,26 @@ between, so quality won this trade rather than size. Three ways to change that:
 `assets/oops-poster.jpg` is the frame shown before playback. Swap it for any other frame if
 you would rather open on a wider shot than the close-up.
 
-## What still needs real assets
+## Media
 
-One card uses generated key art because there is no footage yet, labelled "Key art — episode
-stills pending" on the page: **It Takes A Village** — replace the
-`<figure class="keyart keyart--village">` block.
+Every card in the slate now carries real media:
 
-Swap it for a `<figure class="plate">` (see the Production Standard section), a
-`<figure class="scrub">` for stills, or a `<figure class="screen">` (see the Ooops Academy
-card) once there is a cut to show.
+| Card | Media | Where it lives |
+|---|---|---|
+| League of Rock | 9 episode stills, pointer-scrubbable | `assets/lor-*.jpg` |
+| NutraMedica / NFH | Practitioner testimonials | Bunny Stream `78b92c3d-…` |
+| Ooops Academy | Episode 1, click-to-play | `assets/oops-ep1.mp4` |
+| It Takes A Village | Concept reel | Bunny Stream `28d4f458-…` |
 
-The hero runs the StageX ident (see **The motion system** above). If you later cut a proper
-showreel, point `data-src` on the `<video>` at it and drop the `data-loop-end` attribute so it
-loops in full — the grade, scrim and veil are all in `styles.css` §8 and can be relaxed once
-the footage no longer carries its own wordmark.
+The two Bunny Stream videos are `<iframe>` embeds rather than the site's own player.
+That library has token authentication on — the raw thumbnail and HLS playlist both return
+403 — so only Bunny's player can resolve signed URLs at runtime. Both are `loading="lazy"`
+with autoplay off, so neither costs anything until scrolled to.
+
+**If a Bunny video fails to play on the live site**, check the library's allowed-referrers
+whitelist: it needs to include the domain the site is served from. Turning token auth off
+would also let these use the same poster-plus-play-button treatment as the Ooops card.
+
 
 ## Wiring the form
 
