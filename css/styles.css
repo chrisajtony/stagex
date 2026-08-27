@@ -519,6 +519,28 @@ body:not(.boot) .hero__mat--b{ transform:translateY(100%); }
 .stat__l{ font-family:var(--mono); font-size:.66rem; letter-spacing:.15em; text-transform:uppercase; color:var(--muted); }
 .stat + .stat{ padding-top:clamp(20px,2.6vw,34px); border-top:var(--rule) solid var(--line); }
 
+/* — embedded player (Bunny Stream) in the site's own frame — */
+.screen--embed{ background:#000; }
+.screen__frame{ position:absolute; inset:0; width:100%; height:100%; border:0; display:block; }
+
+/* — inline proof points, when the media slot is taken by footage — */
+.metrics{
+  display:flex; flex-wrap:wrap; gap:clamp(26px,4vw,56px);
+  margin-top:clamp(26px,3.4vw,38px); padding-top:clamp(18px,2.4vw,26px);
+  border-top:var(--rule) solid var(--line);
+}
+.metrics li{ display:grid; gap:5px; }
+.metrics__n{
+  font-weight:800; font-size:clamp(1.9rem,3.4vw,2.9rem); line-height:.88;
+  letter-spacing:-.04em; font-variation-settings:"wdth" 100;
+  background:linear-gradient(100deg, var(--bone) 30%, var(--blue) 130%);
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+}
+.metrics__l{
+  font-family:var(--mono); font-size:.66rem; letter-spacing:.15em;
+  text-transform:uppercase; color:var(--muted);
+}
+
 /* — key art (no footage yet) — */
 .keyart{
   position:relative; aspect-ratio:16/10; overflow:hidden;
