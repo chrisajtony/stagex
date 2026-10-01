@@ -591,7 +591,7 @@ body:not(.boot) .hero__mat--b{ transform:translateY(100%); }
   background:linear-gradient(to top, rgba(8,9,11,.85), transparent);
 }
 
-/* ---------- 12. Fit (who this is for) ---------- */
+/* ---------- 12. Fit (ideal partner) ---------- */
 .fit{ background:var(--graphite); }
 .fit__grid{ display:grid; gap:0; }
 .fit__row{
@@ -603,6 +603,8 @@ body:not(.boot) .hero__mat--b{ transform:translateY(100%); }
 .fit__row:last-child{ border-bottom:var(--rule) solid var(--line); }
 .fit__row svg{ width:18px; height:18px; flex:none; color:var(--blue); }
 .fit__row p{ font-size:clamp(1.1rem,2vw,1.6rem); letter-spacing:-.02em; line-height:1.25; font-weight:500; }
+.fit__row p{ font-weight:400; color:var(--muted); }
+.fit__row strong{ font-weight:600; color:var(--bone); }
 
 /* ---------- 13. Pilot ---------- */
 .pilot{ position:relative; overflow:hidden; }
