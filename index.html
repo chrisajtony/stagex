@@ -321,23 +321,18 @@
         </header>
 
         <div class="work__body">
-          <figure class="screen" data-screen>
-            <video class="screen__v" poster="assets/oops-poster.jpg" preload="none" playsinline
-                   data-src="assets/oops-ep1.mp4"
-                   aria-label="Ooops Academy, episode 1"></video>
-            <span class="plate__mat plate__mat--t" aria-hidden="true"></span>
-            <span class="plate__mat plate__mat--b" aria-hidden="true"></span>
-            <button class="screen__play" type="button">
-              <span class="screen__ring" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg>
-              </span>
-              <span class="mono mono--bone">Play episode 1</span>
-            </button>
-            <figcaption class="screen__cap">
-              <span class="mono mono--bone">EP 01</span>
-              <span class="mono">01:04</span>
-            </figcaption>
-          </figure>
+          <div>
+            <figure class="screen screen--embed">
+              <iframe class="screen__frame"
+                      src="https://iframe.mediadelivery.net/embed/685900/a8f4bd84-214c-44bd-b174-7b43e76ed741?autoplay=false&amp;preload=false&amp;responsive=true"
+                      title="Ooops Academy, episode 1"
+                      loading="lazy" allowfullscreen
+                      allow="accelerometer; gyroscope; encrypted-media; picture-in-picture; fullscreen"></iframe>
+              <span class="plate__mat plate__mat--t" aria-hidden="true"></span>
+              <span class="plate__mat plate__mat--b" aria-hidden="true"></span>
+            </figure>
+            <p class="mono" style="margin-top:14px">Episode 1 · Ooops Academy</p>
+          </div>
           <div>
             <p class="lede">A series for JK and kindergarten children, their families, and their educators.</p>
             <p class="body" style="margin-top:20px">The goal is transition — helping the youngest audience move into the real world with confidence. A premium quality animated YouTube series, produced with extensive AI, carrying the visual acumen of an animated feature film at a fraction of a feature's cost.</p>
